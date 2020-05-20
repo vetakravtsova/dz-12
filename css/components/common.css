@@ -1,0 +1,146 @@
+.title {
+  text-transform: uppercase;
+  border-bottom: solid #4e5a62 4px;
+  margin: 0px 130px;
+}
+
+.box {
+  margin: 0 auto;
+  padding: 20px 30px;
+}
+
+.box::before,
+.box::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.card {
+position: relative;
+padding: 15px;
+
+}
+
+.card .card-img {
+  width: 100%;
+  background-color: #4e5a62;
+}
+
+.card:hover .hover-box {
+  opacity: .4;
+  
+ 
+}
+
+.card .hover-box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #4e5a62;
+	display: flex;
+	flex-direction: column;
+	text-decoration: none;
+	opacity: 0;
+	transition: opacity .3s ease-in-out;
+}
+
+.card .plus {
+	position: relative;
+	flex-grow: 1;
+}
+
+.card .plus::after,
+.card .plus::before {
+	content: '';
+	width: 13px;
+	height: 2px;
+	background-color: #fff;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.card .plus::before {
+	width: 17px;
+	height: 2px;
+}
+
+.card .plus::after {
+	width: 2px;
+	height: 17px;
+}
+
+.card-title {
+	margin: 0;
+	padding: 10px;
+	background-color: #000;
+	color: #fff;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.btn {
+    background-color: transparent;
+    border: solid #ffffff 2px;
+    border-radius: 4px;
+    color: #ffffff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.btn-holder {
+text-align: center;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  color: #4e5a62;
+}
+
+
+
+@media all and (min-width: 576px) {
+  .card {
+    width: 100%;
+  }
+
+.button {
+  text-align: center;
+}
+}
+
+@media all and (min-width: 768px) {
+  .card {
+    float: left;
+    width: 33.33%;
+  }
+
+  .title {
+    border-left: solid 10px #4e5a62;
+    border-bottom: none;
+  }
+
+  .box {
+    margin: 0 auto;
+    padding: 30px 50px;
+  }
+  
+}
+
+@media all and (min-width: 1024px) {
+
+  .box {
+    padding: 50px 100px;
+    
+  }
+
+  .title {margin-top:20px;}
+}
